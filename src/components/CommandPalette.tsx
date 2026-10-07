@@ -110,7 +110,7 @@ export default function CommandPalette({ onThemeChange, currentTheme }: CommandP
     {
       id: "nav-projects",
       name: "Go to Projects",
-      description: "Explore Credain, Wallet Platforms, and SaaS platforms",
+      description: "Explore the WhatsApp AI agent, Credain, and wallet platforms",
       icon: <Hash className="w-4 h-4 text-accent-blue" />,
       category: "Navigation",
       action: () => scrollToSection("projects"),
@@ -183,7 +183,7 @@ export default function CommandPalette({ onThemeChange, currentTheme }: CommandP
     {
       id: "download-resume",
       name: "Download Professional Resume",
-      description: "Obtain Sheikh Aman's backend engineer resume PDF",
+      description: "Obtain Sheikh Aman's full-stack engineer resume PDF",
       icon: <FileText className="w-4 h-4 text-accent-emerald" />,
       category: "Resume",
       action: () => {

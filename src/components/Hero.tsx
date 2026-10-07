@@ -25,10 +25,10 @@ export default function Hero() {
   const [typingText, setTypingText] = useState("");
   const [typingIndex, setTypingIndex] = useState(0);
   const roles = [
-    "Full-Stack Engineer",
-    "NestJS & Node Specialist",
-    "FinTech Developer",
-    "Blockchain Architect",
+    "Product Engineering",
+    "NestJS & Next.js",
+    "FinTech Platforms",
+    "AI Agents & LLM Apps",
   ];
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);

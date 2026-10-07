@@ -15,8 +15,8 @@ export default function TerminalIntro({ onComplete }: TerminalIntroProps) {
   const [isDone, setIsDone] = useState(false);
 
   const script = [
-    { type: "input", text: "ssh guest@aman.dev" },
-    { type: "system", text: "Connecting to aman.dev:22..." },
+    { type: "input", text: "ssh guest@amanslab.com" },
+    { type: "system", text: "Connecting to amanslab.com:22..." },
     { type: "system", text: "Authenticating guest user... SUCCESS." },
     { type: "system", text: "Initializing secure environment /dev/tty0..." },
     { type: "input", text: "cat identity_config.json" },
@@ -24,11 +24,11 @@ export default function TerminalIntro({ onComplete }: TerminalIntroProps) {
       type: "output",
       text: `{
   "engineer": "Sheikh Aman",
-  "role": "Senior Full-Stack & Systems Engineer",
+  "role": "Senior Full-Stack Engineer",
   "experience": "5+ Years",
-  "core_competencies": ["Node.js", "NestJS", "Next.js", "PostgreSQL"],
-  "target_orgs": ["Google", "Stripe", "Cloudflare", "OpenAI", "Datadog"],
-  "philosophy": "Performance is a feature. Design for scale, build for resilience."
+  "location": "Birbhum, West Bengal, India (remote)",
+  "core_competencies": ["Node.js", "NestJS", "Next.js", "PostgreSQL", "AI agents"],
+  "philosophy": "Don't tie your identity to one technology. Learn, adapt, build."
 }`,
     },
     { type: "input", text: "init_portfolio_server.sh" },

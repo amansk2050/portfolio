@@ -16,18 +16,19 @@ export default function Experience() {
   const experiences: ExperienceItem[] = [
     {
       role: "Full-stack Developer",
-      company: "Finanshels.com",
+      company: "Finanshels.com · Remote",
       duration: "May 2025 - Present",
       description: [
-        "Developing core SaaS financial management features and backend workflows with NestJS.",
-        "Building modern full-stack web platforms and customer user interfaces with Next.js, React, and Tailwind CSS.",
-        "Optimizing data layers with PostgreSQL and TypeORM schemas to sustain heavy business transaction scopes.",
+        "Founding full-stack developer: made the architectural decisions for the platform from the start.",
+        "Building an in-house fintech CRM that manages the bookkeeping and accounting services delivered to clients.",
+        "Built AI agents that let the internal team search and pull data without moving across screens.",
+        "NestJS backend and Next.js frontend, with PostgreSQL and TypeORM for the data layer.",
       ],
-      skills: ["NestJS", "Next.js", "React", "PostgreSQL", "TypeORM", "Node.js"],
+      skills: ["NestJS", "Next.js", "React", "PostgreSQL", "TypeORM", "AI Agents"],
     },
     {
       role: "Senior Software Developer",
-      company: "Credain",
+      company: "Credain · Freelance",
       duration: "March 2024 - April 2025",
       description: [
         "Architected a blockchain-based banking platform on an Avalanche Subnet, enhancing transaction efficiency and reducing processing time by 30%.",
@@ -40,7 +41,7 @@ export default function Experience() {
     },
     {
       role: "Blockchain Developer",
-      company: "Bowled.io",
+      company: "Bowled.io · Freelance",
       duration: "March 2024 - July 2024",
       description: [
         "Developed a custodial wallet system for game players, enabling seamless buying and conversion of Bowled tokens with fiat currency.",
@@ -53,7 +54,7 @@ export default function Experience() {
     },
     {
       role: "Blockchain Developer And Auditor",
-      company: "Rapid Innovation",
+      company: "Rapid Innovation · Remote",
       duration: "September 2021 - February 2024",
       description: [
         "Audited EVM-based smart contracts, identifying critical vulnerabilities and implementing security enhancements to prevent potential breaches.",
@@ -64,8 +65,8 @@ export default function Experience() {
       skills: ["Solidity", "Smart Contracts", "EVM", "Security Auditing", "Testing Engines"],
     },
     {
-      role: "Software Developer & Engineer",
-      company: "J&F",
+      role: "Software Developer",
+      company: "J&F · Noida (on-site)",
       duration: "November 2020 - October 2021",
       description: [
         "Engineered key HRMS modules, including a Course Taking System, enabling 1,000+ users to enroll and track progress seamlessly.",
