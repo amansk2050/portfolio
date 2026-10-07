@@ -35,6 +35,45 @@ export default function Projects() {
 
   const projects: Project[] = [
     {
+      id: "whatsapp-agent",
+      title: "WhatsApp AI Sales & Negotiation Agent",
+      description: "Personal project: an AI agent for WhatsApp Business that reads incoming customer chats and negotiates price, offers and discounts inside the business's rules and margins.",
+      impact: "Built for businesses that already run on WATI; also connects through Meta's WhatsApp API.",
+      tech: ["Claude API", "WATI", "WhatsApp Cloud API", "Redis"],
+      features: [
+        "WATI webhook parsing, with conversation history in Redis keyed by waId",
+        "Owner flag so the agent never answers its own outgoing messages",
+        "Respects WhatsApp's 24-hour session window, falling back to approved templates outside it",
+        "Human handoff: a Redis flag silences the agent once a person takes over the chat",
+      ],
+      githubUrl: "https://github.com/amansk2050",
+      diagram: (
+        <svg viewBox="0 0 400 240" fill="none" className="w-full h-auto">
+          <rect width="400" height="240" rx="12" fill="#0d0d12" />
+          {/* chat -> WATI -> agent -> Claude, with the agent reading/writing chat state in Redis */}
+          <path d="M 50,120 L 140,120 L 240,70 L 340,120" stroke="#10b981" strokeWidth="2" strokeDasharray="7 5" className="animate-flow" />
+          <path d="M 240,86 L 240,154" stroke="#06b6d4" strokeWidth="2" strokeDasharray="7 5" className="animate-flow" />
+
+          <circle cx="50" cy="120" r="16" className="fill-[#09090b] stroke-accent-emerald" strokeWidth="2" />
+          <text x="50" y="123" textAnchor="middle" className="fill-white font-mono text-[9px]">Chat</text>
+
+          <circle cx="140" cy="120" r="16" className="fill-[#09090b] stroke-accent-blue" strokeWidth="2" />
+          <text x="140" y="123" textAnchor="middle" className="fill-white font-mono text-[9px]">WATI</text>
+
+          <circle cx="240" cy="70" r="16" className="fill-[#09090b] stroke-accent-purple" strokeWidth="2" />
+          <text x="240" y="73" textAnchor="middle" className="fill-white font-mono text-[9px]">Agent</text>
+
+          <circle cx="240" cy="170" r="16" className="fill-[#09090b] stroke-accent-cyan" strokeWidth="2" />
+          <text x="240" y="173" textAnchor="middle" className="fill-white font-mono text-[9px]">Redis</text>
+
+          <circle cx="340" cy="120" r="16" className="fill-[#09090b] stroke-pink-500" strokeWidth="2" />
+          <text x="340" y="123" textAnchor="middle" className="fill-white font-mono text-[9px]">Claude</text>
+
+          <text x="20" y="25" className="fill-zinc-500 font-mono text-[9px]">WHATSAPP_AGENT_FLOW</text>
+        </svg>
+      ),
+    },
+    {
       id: "credain",
       title: "Credain Banking Platform",
       description: "Built blockchain-powered banking infrastructure on an Avalanche subnet to handle secure, fast token settlements.",

@@ -35,6 +35,22 @@ const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+const InstagramIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+  </svg>
+);
+
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -176,6 +192,22 @@ X-Request-Id: ${generatedRequestId}
                     <span className="text-xs sm:text-sm font-semibold text-white">github.com/amansk2050</span>
                   </div>
                 </a>
+
+                {/* Instagram */}
+                <a
+                  href="https://www.instagram.com/amanslab.ai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 rounded-xl border border-white/5 bg-white/[0.01] hover:bg-white/[0.04] hover:border-white/10 transition group"
+                >
+                  <div className="p-2 rounded-lg bg-[#0d0d12] border border-white/5 text-zinc-400 group-hover:text-pink-500 transition-colors">
+                    <InstagramIcon className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-mono text-zinc-500 block">INSTAGRAM // MOTION-GRAPHICS TECH CONTENT</span>
+                    <span className="text-xs sm:text-sm font-semibold text-white">@amanslab.ai</span>
+                  </div>
+                </a>
               </div>
             </div>
 
@@ -292,7 +324,7 @@ X-Request-Id: ${generatedRequestId}
         {/* Footer */}
         <div className="mt-24 pt-8 border-t border-white/5 text-center text-[10px] text-zinc-600 font-mono space-y-2">
           <div>© {new Date().getFullYear()} Sheikh Aman. All rights reserved.</div>
-          <div>API Version: 1.4.2 // Node runtime // Cloudflare Workers Edge</div>
+          <div>Birbhum, West Bengal, India // working remotely</div>
         </div>
       </div>
     </section>

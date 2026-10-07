@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sheikh Aman | Senior Backend Engineer & System Designer",
-  description: "Senior Backend & Systems Engineer specializing in distributed systems, cloud architecture, event-driven platforms, and secure wallet infrastructure.",
+  title: "Sheikh Aman | Senior Full-Stack Engineer, AI & Product",
+  description: "Senior full-stack engineer with 5+ years building fintech platforms, AI agents and scalable backends with NestJS, Next.js, Node.js and PostgreSQL. Based in West Bengal, India, working remotely.",
 };
 
 export default function RootLayout({

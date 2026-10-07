@@ -10,8 +10,8 @@ export default function About() {
   const timelineEvents = [
     {
       year: "2020 - 2021",
-      title: "Software Developer & Engineer",
-      subtitle: "J&F Noida",
+      title: "Software Developer",
+      subtitle: "J&F, Noida",
       desc: "Engineered key HRMS modules and Course Taking systems. Automated backend workflows using AWS Lambda and PostgreSQL database management.",
       icon: <Code2 className="w-4 h-4 text-accent-blue" />,
     },
@@ -24,16 +24,16 @@ export default function About() {
     },
     {
       year: "2024 - 2025",
-      title: "Senior Software Developer & Wallet Infra",
-      subtitle: "Credain / Bowled.io",
-      desc: "Architected blockchain banking platforms on Avalanche Subnets and custodial wallet integrations for Bowled.io (10k+ wallets created).",
+      title: "Senior Software Developer & Blockchain Developer",
+      subtitle: "Credain / Bowled.io (freelance)",
+      desc: "Architected a blockchain banking platform on an Avalanche Subnet for Credain and a custodial wallet system for Bowled.io (10,000+ wallets created).",
       icon: <Server className="w-4 h-4 text-accent-cyan" />,
     },
     {
       year: "2025 - Present",
-      title: "Full-Stack Developer",
+      title: "Founding Full-Stack Developer",
       subtitle: "Finanshels.com",
-      desc: "Developing financial platforms and end-to-end full-stack features using NestJS, Next.js, and PostgreSQL.",
+      desc: "Owns the architecture of an in-house fintech CRM for bookkeeping and accounting services, plus AI agents for the internal team. NestJS and Next.js.",
       icon: <Terminal className="w-4 h-4 text-accent-emerald" />,
     },
   ];
@@ -50,10 +50,10 @@ export default function About() {
             // About Sheikh Aman
           </h2>
           <h3 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Engineering Systems for Extreme Reliability
+            Backend Depth, Full-Stack Range
           </h3>
           <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
-            A developer who focuses on systemic design, clean database topologies, and robust message queuing rather than generic visual designs.
+            A full-stack engineer who started in backend, went through blockchain and AI, and now builds whole products end to end.
           </p>
         </div>
 
@@ -132,10 +132,13 @@ export default function About() {
                   className="space-y-6 font-sans text-sm text-zinc-300 leading-relaxed"
                 >
                   <p>
-                    I am a Full-Stack Engineer with over 5 years of experience building scalable backend systems and modern web platforms. My core expertise lies in designing reliable and high-performance applications using NestJS, Next.js, Node.js, and PostgreSQL.
+                    I am a full-stack engineer with 5+ years of experience, based in Birbhum, West Bengal, India, and working remotely. I build with NestJS, Next.js, Node.js and PostgreSQL, and studied at Durgapur Institute of Advanced Technology and Management.
                   </p>
                   <p>
-                    From auditing smart contracts on EVM to engineering custodial wallet structures for gaming ecosystems processing thousands of secure operations, I focus on clean backend architecture, system design, database performance (TypeORM, SQL), and building products that sustain real transaction volumes.
+                    My path went backend first, then blockchain and Web3 (smart contract audits, ERC-4337, custodial wallets), then AI and LLM applications, and now full-stack product work. At Finanshels I am the founding full-stack developer: I make the architectural calls, build an in-house fintech CRM, and build AI agents that let the team pull data without hopping between screens.
+                  </p>
+                  <p>
+                    Not every problem needs blockchain or AI. Simple, well-built systems solve most of them.
                   </p>
                   <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/5">
                     <div className="space-y-2">
@@ -143,15 +146,15 @@ export default function About() {
                       <ul className="text-zinc-400 space-y-1.5 text-xs">
                         <li className="flex items-center gap-1.5">
                           <ChevronRight className="w-3.5 h-3.5 text-accent-blue" />
-                          Distributed System Routing
+                          Full-Stack Product Development
                         </li>
                         <li className="flex items-center gap-1.5">
                           <ChevronRight className="w-3.5 h-3.5 text-accent-blue" />
-                          Custodial Wallet Security
+                          Backend &amp; Event-Driven Architecture
                         </li>
                         <li className="flex items-center gap-1.5">
                           <ChevronRight className="w-3.5 h-3.5 text-accent-blue" />
-                          Smart Contract Audits
+                          AI Agents &amp; LLM Applications
                         </li>
                       </ul>
                     </div>

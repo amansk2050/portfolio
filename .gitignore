@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# promo video: Remotion project and its rendered files, kept local only
+/promo-video/
+/public/video/

@@ -1,15 +1,16 @@
 "use client";
 
 import React, { useState } from "react";
-import { Code2, Server, Database, Cloud, Network, Link, Terminal, CheckCircle2 } from "lucide-react";
-import { motion } from "framer-motion";
+import { Bot, Code2, Server, Database, Network, Link, Terminal } from "lucide-react";
 
 interface SkillCategory {
   id: string;
   name: string;
   icon: React.ReactNode;
   colorClass: string;
-  skills: { name: string; level: number }[];
+  skills: string[];
+  // Where the skills were used, shown when the card is focused.
+  note: string;
 }
 
 export default function Skills() {
@@ -17,80 +18,52 @@ export default function Skills() {
 
   const categories: SkillCategory[] = [
     {
-      id: "languages",
-      name: "Programming Languages",
-      icon: <Code2 className="w-5 h-5 text-accent-blue" />,
-      colorClass: "border-accent-blue/20 hover:border-accent-blue/40 shadow-accent-blue/5",
-      skills: [
-        { name: "JavaScript", level: 95 },
-        { name: "TypeScript", level: 90 },
-        { name: "SQL (PostgreSQL)", level: 85 },
-        { name: "Solidity", level: 80 },
-      ],
-    },
-    {
       id: "backend",
       name: "Backend Core",
       icon: <Server className="w-5 h-5 text-accent-purple" />,
       colorClass: "border-accent-purple/20 hover:border-accent-purple/40 shadow-accent-purple/5",
-      skills: [
-        { name: "Node.js", level: 95 },
-        { name: "NestJS", level: 90 },
-        { name: "ExpressJS", level: 92 },
-        { name: "REST / GraphQL APIs", level: 95 },
-        { name: "Auth (OAuth, JWT, Session)", level: 90 },
-        { name: "Microservices Architecture", level: 85 },
-      ],
+      skills: ["Node.js", "NestJS", "ExpressJS", "TypeScript", "REST APIs"],
+      note: "Backend since 2020, from J&F to Finanshels today.",
     },
     {
-      id: "databases",
-      name: "Databases & Storage",
+      id: "frontend",
+      name: "Frontend",
+      icon: <Code2 className="w-5 h-5 text-accent-blue" />,
+      colorClass: "border-accent-blue/20 hover:border-accent-blue/40 shadow-accent-blue/5",
+      skills: ["Next.js", "React", "TanStack Query", "shadcn/ui", "Tailwind CSS"],
+      note: "Went full-stack in 2024. First blocker: a Next.js hydration error.",
+    },
+    {
+      id: "ai",
+      name: "AI & Agents",
+      icon: <Bot className="w-5 h-5 text-accent-emerald" />,
+      colorClass: "border-accent-emerald/20 hover:border-accent-emerald/40 shadow-accent-emerald/5",
+      skills: ["Claude API", "LLM Applications", "Agent Workflows", "WhatsApp automation (WATI)"],
+      note: "Internal AI agents at Finanshels and a WhatsApp sales agent of my own.",
+    },
+    {
+      id: "data",
+      name: "Data & Messaging",
       icon: <Database className="w-5 h-5 text-accent-cyan" />,
       colorClass: "border-accent-cyan/20 hover:border-accent-cyan/40 shadow-accent-cyan/5",
-      skills: [
-        { name: "PostgreSQL", level: 90 },
-        { name: "TypeORM", level: 88 },
-        { name: "Redis Cache & Pub/Sub", level: 90 },
-        { name: "MongoDB", level: 85 },
-      ],
+      skills: ["PostgreSQL", "TypeORM", "Redis", "RabbitMQ"],
+      note: "RabbitMQ event architecture at Credain, Redis-backed chat state in my agent.",
     },
     {
-      id: "cloud",
-      name: "Cloud & DevOps",
-      icon: <Cloud className="w-5 h-5 text-accent-emerald" />,
-      colorClass: "border-accent-emerald/20 hover:border-accent-emerald/40 shadow-accent-emerald/5",
-      skills: [
-        { name: "AWS (EC2, Lambda, S3, RDS)", level: 80 },
-        { name: "Docker", level: 85 },
-        { name: "CI/CD Pipelines", level: 80 },
-        { name: "Nginx Server", level: 85 },
-        { name: "Reverse Proxy & Load Balancing", level: 85 },
-      ],
-    },
-    {
-      id: "distributed",
-      name: "Distributed Systems",
+      id: "architecture",
+      name: "Architecture & Cloud",
       icon: <Network className="w-5 h-5 text-yellow-500" />,
       colorClass: "border-yellow-500/20 hover:border-yellow-500/40 shadow-yellow-500/5",
-      skills: [
-        { name: "Event-driven architecture", level: 90 },
-        { name: "Message Queues (RabbitMQ)", level: 85 },
-        { name: "Rate Limiting & Throttling", level: 90 },
-        { name: "Horizontal Scaling Models", level: 80 },
-        { name: "Consistent Hashing & Caching", level: 85 },
-      ],
+      skills: ["Backend Architecture", "Distributed Systems", "Event-Driven Design", "AWS Lambda"],
+      note: "Founding-engineer architecture calls at Finanshels; EVM chains load-tested to 10K+ TPS.",
     },
     {
       id: "blockchain",
-      name: "Blockchain Infrastructure",
+      name: "Earlier: Blockchain",
       icon: <Link className="w-5 h-5 text-pink-500" />,
       colorClass: "border-pink-500/20 hover:border-pink-500/40 shadow-pink-500/5",
-      skills: [
-        { name: "Smart Contracts (EVM)", level: 85 },
-        { name: "ERC-4337 Account Abstraction", level: 80 },
-        { name: "Custom Bundlers & Paymasters", level: 75 },
-        { name: "Wallet Infrastructure (Bowled)", level: 85 },
-      ],
+      skills: ["Solidity", "Smart Contract Auditing", "EVM Chains", "ERC-4337", "Ethers.js"],
+      note: "2021 to 2025: audits at Rapid Innovation, account abstraction at Credain, wallets at Bowled.io.",
     },
   ];
 
@@ -109,7 +82,7 @@ export default function Skills() {
             My Technical Arsenal
           </h3>
           <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
-            Hover over a card to focus on its specifics. Designed for building robust, high-performance backends.
+            Backend depth, a full-stack range, and the AI work I am doing now. Blockchain is where I have been, not where I am headed.
           </p>
         </div>
 
@@ -124,7 +97,7 @@ export default function Skills() {
                 key={cat.id}
                 onMouseEnter={() => setActiveCategory(cat.id)}
                 onMouseLeave={() => setActiveCategory(null)}
-                className={`glass-card p-6 rounded-xl border flex flex-col justify-between h-[320px] shadow-lg relative overflow-hidden transition-all duration-300 ${cat.colorClass} ${
+                className={`glass-card p-6 rounded-xl border flex flex-col justify-between min-h-[240px] shadow-lg relative overflow-hidden transition-all duration-300 ${cat.colorClass} ${
                   hasFocusActive && !isFocused ? "opacity-40 scale-[0.98]" : "opacity-100 scale-100"
                 }`}
               >
@@ -146,50 +119,20 @@ export default function Skills() {
 
                   {/* Skills Mini List / Badges */}
                   <div className="flex flex-wrap gap-1.5 pt-2">
-                    {cat.skills.map((s, idx) => (
+                    {cat.skills.map((s) => (
                       <span
-                        key={idx}
+                        key={s}
                         className="text-[10px] font-mono bg-white/[0.03] border border-white/5 hover:border-white/10 hover:bg-white/[0.06] text-zinc-300 hover:text-white px-2 py-0.5 rounded transition duration-200"
                       >
-                        {s.name}
+                        {s}
                       </span>
                     ))}
                   </div>
                 </div>
 
-                {/* Level indicators shown when category is hovered */}
-                <div className="mt-4 pt-4 border-t border-white/5 space-y-2.5">
-                  {isFocused ? (
-                    <div className="space-y-2">
-                      <div className="text-[10px] font-mono text-zinc-500 flex items-center justify-between">
-                        <span>TECHNOLOGY</span>
-                        <span>PROFICIENCY</span>
-                      </div>
-                      <div className="space-y-1.5">
-                        {cat.skills.slice(0, 3).map((s, idx) => (
-                          <div key={idx} className="space-y-0.5">
-                            <div className="flex justify-between text-[10px] font-mono text-zinc-300">
-                              <span>{s.name}</span>
-                              <span>{s.level}%</span>
-                            </div>
-                            <div className="h-1 bg-white/[0.04] rounded-full overflow-hidden">
-                              <motion.div
-                                initial={{ width: 0 }}
-                                animate={{ width: `${s.level}%` }}
-                                transition={{ duration: 0.5, ease: "easeOut" }}
-                                className="h-full bg-gradient-to-r from-accent-blue to-accent-cyan"
-                              />
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="flex items-center gap-2 text-[10px] font-mono text-zinc-500">
-                      <Terminal className="w-3.5 h-3.5" />
-                      <span>Hover card for engine specifications...</span>
-                    </div>
-                  )}
+                <div className="mt-4 pt-4 border-t border-white/5 flex items-start gap-2 text-[11px] font-mono leading-relaxed">
+                  <Terminal className="w-3.5 h-3.5 mt-0.5 shrink-0 text-zinc-500" />
+                  <span className={isFocused ? "text-zinc-300" : "text-zinc-500"}>{cat.note}</span>
                 </div>
               </div>
             );
