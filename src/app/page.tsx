@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useCallback, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -10,23 +10,13 @@ import SystemDesignShowcase from "@/components/SystemDesignShowcase";
 import Experience from "@/components/Experience";
 import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
-import TerminalIntro from "@/components/TerminalIntro";
+import IntroOverlay from "@/components/IntroOverlay";
 
 export default function Home() {
+  // The page always renders (so it is in the server HTML); the intro only plays over it.
   const [showIntro, setShowIntro] = useState(true);
+  const hideIntro = useCallback(() => setShowIntro(false), []);
   const [theme, setTheme] = useState("obsidian");
-
-  useEffect(() => {
-    // Check if intro has already been seen in this session
-    const hasSeenIntro = sessionStorage.getItem("portfolio-intro-seen");
-    if (hasSeenIntro) {
-      setShowIntro(false);
-    }
-  }, []);
-
-  const handleIntroComplete = () => {
-    setShowIntro(false);
-  };
 
   const handleThemeChange = (newTheme: string) => {
     setTheme(newTheme);
@@ -56,24 +46,20 @@ export default function Home() {
       case "obsidian":
       default:
         return {
-          "--color-accent-blue": "#3b82f6", // Default Blue
-          "--color-accent-purple": "#a855f7", // Default Purple
-          "--color-accent-cyan": "#06b6d4", // Default Cyan
-          "--color-accent-blue-glow": "rgba(59, 130, 246, 0.15)",
-          "--color-accent-purple-glow": "rgba(168, 85, 247, 0.15)",
-          "--color-accent-cyan-glow": "rgba(6, 182, 212, 0.12)",
+          "--color-accent-blue": "#b4552f", // Clay (default)
+          "--color-accent-purple": "#9a4a2b", // Deep clay
+          "--color-accent-cyan": "#3f6d99", // Blue
+          "--color-accent-blue-glow": "rgba(217, 119, 87, 0.12)",
+          "--color-accent-purple-glow": "rgba(217, 119, 87, 0.1)",
+          "--color-accent-cyan-glow": "rgba(106, 155, 204, 0.12)",
         } as React.CSSProperties;
     }
   };
 
-  if (showIntro) {
-    return <TerminalIntro onComplete={handleIntroComplete} />;
-  }
-
   return (
     <div
       style={getThemeVariables()}
-      className="min-h-screen bg-[#09090b] text-[#f4f4f5] transition-colors duration-500 selection:bg-accent-purple/30 selection:text-white"
+      className="min-h-screen bg-[#faf9f5] text-[#141413] transition-colors duration-500 selection:bg-accent-purple/30 selection:text-white"
     >
       <Navbar onThemeChange={handleThemeChange} currentTheme={theme} />
       
@@ -87,6 +73,8 @@ export default function Home() {
         <Blog />
         <Contact />
       </main>
+
+      {showIntro && <IntroOverlay onDone={hideIntro} />}
     </div>
   );
 }

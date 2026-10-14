@@ -121,7 +121,7 @@ X-Request-Id: ${generatedRequestId}
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#09090b] relative border-t border-white/5">
+    <section id="contact" className="py-24 bg-[#faf9f5] relative border-t border-white/5">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] radial-glow-purple pointer-events-none opacity-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -152,7 +152,7 @@ X-Request-Id: ${generatedRequestId}
                   href="mailto:skaman.2050@gmail.com"
                   className="flex items-center gap-4 p-4 rounded-xl border border-white/5 bg-white/[0.01] hover:bg-white/[0.04] hover:border-white/10 transition group"
                 >
-                  <div className="p-2 rounded-lg bg-[#0d0d12] border border-white/5 text-zinc-400 group-hover:text-accent-blue transition-colors">
+                  <div className="p-2 rounded-lg bg-[#f3f1ea] border border-white/5 text-zinc-400 group-hover:text-accent-blue transition-colors">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
@@ -168,7 +168,7 @@ X-Request-Id: ${generatedRequestId}
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 rounded-xl border border-white/5 bg-white/[0.01] hover:bg-white/[0.04] hover:border-white/10 transition group"
                 >
-                  <div className="p-2 rounded-lg bg-[#0d0d12] border border-white/5 text-zinc-400 group-hover:text-accent-purple transition-colors">
+                  <div className="p-2 rounded-lg bg-[#f3f1ea] border border-white/5 text-zinc-400 group-hover:text-accent-purple transition-colors">
                     <LinkedinIcon className="w-5 h-5" />
                   </div>
                   <div>
@@ -184,7 +184,7 @@ X-Request-Id: ${generatedRequestId}
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 rounded-xl border border-white/5 bg-white/[0.01] hover:bg-white/[0.04] hover:border-white/10 transition group"
                 >
-                  <div className="p-2 rounded-lg bg-[#0d0d12] border border-white/5 text-zinc-400 group-hover:text-accent-cyan transition-colors">
+                  <div className="p-2 rounded-lg bg-[#f3f1ea] border border-white/5 text-zinc-400 group-hover:text-accent-cyan transition-colors">
                     <GithubIcon className="w-5 h-5" />
                   </div>
                   <div>
@@ -200,7 +200,7 @@ X-Request-Id: ${generatedRequestId}
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 rounded-xl border border-white/5 bg-white/[0.01] hover:bg-white/[0.04] hover:border-white/10 transition group"
                 >
-                  <div className="p-2 rounded-lg bg-[#0d0d12] border border-white/5 text-zinc-400 group-hover:text-pink-500 transition-colors">
+                  <div className="p-2 rounded-lg bg-[#f3f1ea] border border-white/5 text-zinc-400 group-hover:text-pink-500 transition-colors">
                     <InstagramIcon className="w-5 h-5" />
                   </div>
                   <div>
@@ -222,7 +222,7 @@ X-Request-Id: ${generatedRequestId}
               </p>
               <button
                 onClick={handleBookMeeting}
-                className="w-full py-2.5 rounded-lg bg-accent-emerald text-xs font-semibold text-white hover:bg-emerald-600 transition shadow-lg shadow-emerald-500/10 cursor-pointer"
+                className="w-full py-2.5 rounded-lg bg-accent-emerald text-xs font-semibold text-[#faf9f5] hover:bg-emerald-600 transition shadow-lg shadow-emerald-500/10 cursor-pointer"
               >
                 Book 15min Tech Sync
               </button>
@@ -241,7 +241,7 @@ X-Request-Id: ${generatedRequestId}
                   onChange={handleInputChange}
                   required
                   placeholder="John Doe"
-                  className="w-full bg-[#0d0d12] border border-white/5 focus:border-white/15 focus:outline-none rounded-lg px-4 py-2.5 text-xs text-white placeholder:text-zinc-600 transition"
+                  className="w-full bg-[#f3f1ea] border border-white/5 focus:border-white/15 focus:outline-none rounded-lg px-4 py-2.5 text-xs text-white placeholder:text-zinc-600 transition"
                 />
               </div>
 
@@ -254,7 +254,7 @@ X-Request-Id: ${generatedRequestId}
                   onChange={handleInputChange}
                   required
                   placeholder="john@example.com"
-                  className="w-full bg-[#0d0d12] border border-white/5 focus:border-white/15 focus:outline-none rounded-lg px-4 py-2.5 text-xs text-white placeholder:text-zinc-600 transition"
+                  className="w-full bg-[#f3f1ea] border border-white/5 focus:border-white/15 focus:outline-none rounded-lg px-4 py-2.5 text-xs text-white placeholder:text-zinc-600 transition"
                 />
               </div>
 
@@ -267,14 +267,14 @@ X-Request-Id: ${generatedRequestId}
                   required
                   rows={4}
                   placeholder="Let's build a payment platform..."
-                  className="w-full bg-[#0d0d12] border border-white/5 focus:border-white/15 focus:outline-none rounded-lg px-4 py-2.5 text-xs text-white placeholder:text-zinc-600 transition resize-none"
+                  className="w-full bg-[#f3f1ea] border border-white/5 focus:border-white/15 focus:outline-none rounded-lg px-4 py-2.5 text-xs text-white placeholder:text-zinc-600 transition resize-none"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting || !!submissionStatus}
-                className="w-full py-3 rounded-lg bg-gradient-to-r from-accent-blue to-accent-purple text-xs font-semibold text-white flex items-center justify-center gap-2 shadow-lg shadow-accent-blue/15 hover:shadow-accent-blue/25 hover:translate-y-[-1px] active:translate-y-[0px] disabled:opacity-50 disabled:translate-y-0 transition cursor-pointer"
+                className="w-full py-3 rounded-lg bg-gradient-to-r from-accent-blue to-accent-purple text-xs font-semibold text-[#faf9f5] flex items-center justify-center gap-2 shadow-lg shadow-accent-blue/15 hover:shadow-accent-blue/25 hover:translate-y-[-1px] active:translate-y-[0px] disabled:opacity-50 disabled:translate-y-0 transition cursor-pointer"
               >
                 {isSubmitting ? (
                   <>

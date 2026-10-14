@@ -29,7 +29,7 @@ export default function SystemDesignShowcase() {
       id: "payment",
       title: "Distributed Payments System",
       description: "A double-entry ledger settlement architecture designed to handle transaction retries, external payment provider API failures, and race conditions safely.",
-      flowColor: "#3b82f6",
+      flowColor: "#b4552f",
       stages: [
         {
           id: "client",
@@ -86,7 +86,7 @@ export default function SystemDesignShowcase() {
       id: "notification",
       title: "High-volume Notification Engine",
       description: "An event-driven notification dispatch pipeline processing high-frequency user alerts across email, SMS, and push channels.",
-      flowColor: "#a855f7",
+      flowColor: "#9a4a2b",
       stages: [
         {
           id: "client",
@@ -143,7 +143,7 @@ export default function SystemDesignShowcase() {
       id: "queue_processing",
       title: "High-throughput Queue Worker",
       description: "A concurrent background processing pipeline designed for large workloads like video optimization or heavy batch computations.",
-      flowColor: "#06b6d4",
+      flowColor: "#3f6d99",
       stages: [
         {
           id: "client",
@@ -202,7 +202,7 @@ export default function SystemDesignShowcase() {
   const activeStage = activeArch.stages[selectedStageIdx] || activeArch.stages[0];
 
   return (
-    <section id="system-design" className="py-24 bg-[#09090b] relative border-t border-white/5">
+    <section id="system-design" className="py-24 bg-[#faf9f5] relative border-t border-white/5">
       <div className="absolute top-1/3 right-1/4 w-96 h-96 radial-glow-blue pointer-events-none opacity-20" />
       <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] radial-glow-purple pointer-events-none opacity-15" />
 
@@ -272,11 +272,11 @@ export default function SystemDesignShowcase() {
                       <div
                         className={`w-12 h-12 rounded-full flex items-center justify-center border transition-all duration-300 ${
                           isSelected
-                            ? "bg-[#09090b] shadow-lg"
+                            ? "bg-[#faf9f5] shadow-lg"
                             : "bg-white/[0.02]"
                         }`}
                         style={{
-                          borderColor: isSelected ? activeArch.flowColor : "rgba(255, 255, 255, 0.08)",
+                          borderColor: isSelected ? activeArch.flowColor : "rgba(20, 20, 19, 0.14)",
                           boxShadow: isSelected ? `0 0 15px ${activeArch.flowColor}30` : "none"
                         }}
                       >
@@ -301,7 +301,7 @@ export default function SystemDesignShowcase() {
             </div>
 
             {/* Visual packet animation bridge representation */}
-            <div className="bg-[#050508] p-3 rounded-lg border border-white/5 font-mono text-[10px] text-zinc-500 mt-6 relative z-10 flex items-center justify-between">
+            <div className="bg-[#efede5] p-3 rounded-lg border border-white/5 font-mono text-[10px] text-zinc-500 mt-6 relative z-10 flex items-center justify-between">
               <span className="flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-accent-emerald animate-pulse" />
                 Packet status: Flowing dynamically...

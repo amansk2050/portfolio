@@ -68,7 +68,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-24 bg-[#09090b] relative overflow-hidden border-t border-white/5">
+    <section id="skills" className="py-24 bg-[#faf9f5] relative overflow-hidden border-t border-white/5">
       {/* Background Grids */}
       <div className="absolute inset-0 tech-grid opacity-[0.03]" />
       <div className="absolute top-1/4 right-0 w-[400px] h-[400px] radial-glow-blue pointer-events-none opacity-20" />

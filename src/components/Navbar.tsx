@@ -73,7 +73,7 @@ export default function Navbar({ onThemeChange, currentTheme }: NavbarProps) {
     <nav
       className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
         scrolled
-          ? "bg-[#09090b]/75 border-b border-white/5 backdrop-blur-md py-3"
+          ? "bg-[#faf9f5]/75 border-b border-white/5 backdrop-blur-md py-3"
           : "bg-transparent py-5"
       }`}
     >
@@ -82,7 +82,7 @@ export default function Navbar({ onThemeChange, currentTheme }: NavbarProps) {
           {/* Logo */}
           <div className="flex items-center gap-2 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
             <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-accent-blue via-accent-purple to-accent-cyan flex items-center justify-center shadow-lg shadow-accent-blue/25 group-hover:rotate-12 transition-transform duration-300">
-              <Cpu className="w-4 h-4 text-white" />
+              <Cpu className="w-4 h-4 text-[#faf9f5]" />
             </div>
             <span className="font-mono text-sm font-semibold tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-zinc-100 to-zinc-400 group-hover:from-white group-hover:to-zinc-200 transition-colors">
               AMAN<span className="text-accent-blue">.DEV</span>
@@ -143,7 +143,7 @@ export default function Navbar({ onThemeChange, currentTheme }: NavbarProps) {
 
       {/* Mobile Nav Overlay */}
       {isOpen && (
-        <div className="md:hidden fixed inset-x-0 top-[57px] bg-[#09090b]/95 border-b border-white/10 backdrop-blur-xl transition-all duration-300 py-6 px-4 z-30">
+        <div className="md:hidden fixed inset-x-0 top-[57px] bg-[#faf9f5]/95 border-b border-white/10 backdrop-blur-xl transition-all duration-300 py-6 px-4 z-30">
           <div className="flex flex-col gap-4">
             {menuItems.map((item) => (
               <button

@@ -1,0 +1,181 @@
+/*
+ * First-visit intro. Pure CSS so it starts with the server HTML and always clears itself,
+ * even if JavaScript is slow or fails. JS only adds "skip" and unmounts it afterwards.
+ * Colours come from theme tokens, so it follows whichever theme the site uses.
+ *
+ * Timeline (2.6s): graph draws 0-0.9s, packets flow from 0.7s, name rises 0.45-1.1s,
+ * progress fills 0.2-1.9s, overlay wipes up 1.95-2.55s.
+ */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+  cursor: pointer;
+  animation: wipe 0.6s cubic-bezier(0.76, 0, 0.24, 1) 1.95s forwards;
+}
+
+/* Returning visitors (flag set by an inline script before paint) and reduced-motion users skip it. */
+:global(html[data-intro-seen]) .overlay {
+  display: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .overlay {
+    display: none;
+  }
+}
+
+.skip {
+  animation: wipe 0.45s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+.skip .stage {
+  animation: lift 0.3s ease-in forwards;
+}
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 24px;
+  animation: lift 0.35s ease-in 1.85s forwards;
+}
+
+/* --- graph --- */
+.graph {
+  width: min(300px, 70vw);
+  height: auto;
+  overflow: visible;
+}
+.edge {
+  fill: none;
+  stroke: var(--color-zinc-700);
+  stroke-width: 1.25;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw 0.5s cubic-bezier(0.65, 0, 0.35, 1) var(--delay) forwards;
+}
+.node {
+  fill: var(--background);
+  stroke: var(--color-zinc-100);
+  stroke-width: 1.5;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(0);
+  animation: pop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) var(--delay) forwards;
+}
+.nodeActive {
+  fill: var(--color-accent-blue);
+  stroke: var(--color-accent-blue);
+}
+.packet {
+  fill: var(--color-accent-blue);
+}
+
+/* --- type --- */
+.name {
+  margin-top: 36px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(40px, 7vw, 72px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--color-zinc-100);
+}
+.word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: 0.08em;
+}
+.word > span {
+  display: inline-block;
+  transform: translateY(105%);
+  animation: rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) var(--delay) forwards;
+}
+.role {
+  margin-top: 12px;
+  font-family: var(--font-sans);
+  font-style: italic;
+  font-size: clamp(17px, 2.2vw, 21px);
+  color: var(--color-zinc-400);
+  opacity: 0;
+  animation: fade 0.6s ease-out 0.85s forwards;
+}
+
+.progress {
+  margin-top: 32px;
+  width: 160px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--color-zinc-800);
+  overflow: hidden;
+}
+.progress > span {
+  display: block;
+  height: 100%;
+  background: var(--color-accent-blue);
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: fill 1.7s cubic-bezier(0.45, 0, 0.2, 1) 0.2s forwards;
+}
+
+.hint {
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--color-zinc-500);
+  opacity: 0;
+  animation: fade 0.4s ease-out 0.6s forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes pop {
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes rise {
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes fade {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fill {
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes lift {
+  to {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+}
+@keyframes wipe {
+  from {
+    clip-path: inset(0 0 0 0);
+  }
+  to {
+    clip-path: inset(0 0 100% 0);
+    visibility: hidden;
+  }
+}

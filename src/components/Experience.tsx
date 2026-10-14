@@ -80,7 +80,7 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-24 bg-[#09090b] relative border-t border-white/5">
+    <section id="experience" className="py-24 bg-[#faf9f5] relative border-t border-white/5">
       <div className="absolute top-1/4 right-1/3 w-80 h-80 radial-glow-blue pointer-events-none opacity-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -101,7 +101,7 @@ export default function Experience() {
           {experiences.map((exp, idx) => (
             <div key={idx} className="relative group">
               {/* Icon Indicator */}
-              <div className="absolute -left-[41px] top-1.5 w-6 h-6 rounded-full bg-[#09090b] border border-white/10 flex items-center justify-center text-zinc-400 group-hover:border-accent-blue group-hover:text-white transition duration-300">
+              <div className="absolute -left-[41px] top-1.5 w-6 h-6 rounded-full bg-[#faf9f5] border border-white/10 flex items-center justify-center text-zinc-400 group-hover:border-accent-blue group-hover:text-white transition duration-300">
                 <Briefcase className="w-3.5 h-3.5" />
               </div>
 
