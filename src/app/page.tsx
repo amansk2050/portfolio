@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useCallback, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -10,23 +10,13 @@ import SystemDesignShowcase from "@/components/SystemDesignShowcase";
 import Experience from "@/components/Experience";
 import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
-import TerminalIntro from "@/components/TerminalIntro";
+import IntroOverlay from "@/components/IntroOverlay";
 
 export default function Home() {
+  // The page always renders (so it is in the server HTML); the intro only plays over it.
   const [showIntro, setShowIntro] = useState(true);
+  const hideIntro = useCallback(() => setShowIntro(false), []);
   const [theme, setTheme] = useState("obsidian");
-
-  useEffect(() => {
-    // Check if intro has already been seen in this session
-    const hasSeenIntro = sessionStorage.getItem("portfolio-intro-seen");
-    if (hasSeenIntro) {
-      setShowIntro(false);
-    }
-  }, []);
-
-  const handleIntroComplete = () => {
-    setShowIntro(false);
-  };
 
   const handleThemeChange = (newTheme: string) => {
     setTheme(newTheme);
@@ -66,10 +56,6 @@ export default function Home() {
     }
   };
 
-  if (showIntro) {
-    return <TerminalIntro onComplete={handleIntroComplete} />;
-  }
-
   return (
     <div
       style={getThemeVariables()}
@@ -87,6 +73,8 @@ export default function Home() {
         <Blog />
         <Contact />
       </main>
+
+      {showIntro && <IntroOverlay onDone={hideIntro} />}
     </div>
   );
 }

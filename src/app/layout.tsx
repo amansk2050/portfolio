@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Lora, Poppins } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 // Claude-inspired type: Poppins for headings, Lora for body (Geist Mono kept for code labels).
@@ -32,9 +33,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${poppins.variable} ${lora.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {/* Marks returning visitors before first paint so the intro overlay never flashes. */}
+        <Script id="intro-seen" strategy="beforeInteractive">
+          {`try{if(sessionStorage.getItem("portfolio-intro-seen"))document.documentElement.dataset.introSeen="1"}catch(e){}`}
+        </Script>
+        {children}
+      </body>
     </html>
   );
 }
