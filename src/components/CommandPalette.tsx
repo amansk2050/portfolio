@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Search, Hash, Terminal, FileText, Palette, Wifi, HelpCircle } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
+import { RESUME_FILENAME, RESUME_URL } from "@/lib/resume";
 
 interface CommandItem {
   id: string;
@@ -187,7 +188,10 @@ export default function CommandPalette({ onThemeChange, currentTheme }: CommandP
       icon: <FileText className="w-4 h-4 text-accent-emerald" />,
       category: "Resume",
       action: () => {
-        alert("Downloading Resume... (Simulated file download: sheikh-aman-resume.pdf)");
+        const link = document.createElement("a");
+        link.href = RESUME_URL;
+        link.download = RESUME_FILENAME;
+        link.click();
         setIsOpen(false);
       },
     },

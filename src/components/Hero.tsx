@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ArrowRight, Download, Mail, Play, Cpu, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
+import { RESUME_FILENAME, RESUME_URL } from "@/lib/resume";
 
 interface SystemNode {
   x: number;
@@ -306,13 +307,14 @@ export default function Hero() {
               <ArrowRight className="w-4 h-4" />
             </button>
 
-            <button
-              onClick={() => alert("Resume Download (Simulated)")}
+            <a
+              href={RESUME_URL}
+              download={RESUME_FILENAME}
               className="px-5 py-3 rounded-lg bg-white/[0.03] border border-white/10 hover:border-white/20 text-xs font-semibold text-zinc-300 hover:text-white flex items-center gap-2 transition cursor-pointer"
             >
               <Download className="w-4 h-4" />
               <span>Download Resume</span>
-            </button>
+            </a>
 
             <button
               onClick={() => handleScrollTo("contact")}
