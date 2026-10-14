@@ -39,7 +39,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 bg-[#09090b] relative overflow-hidden">
+    <section id="about" className="py-24 bg-[#faf9f5] relative overflow-hidden">
       {/* Glow overlays */}
       <div className="absolute top-1/2 left-0 w-80 h-80 radial-glow-purple pointer-events-none opacity-30" />
       <div className="absolute bottom-0 right-0 w-96 h-96 radial-glow-cyan pointer-events-none opacity-25" />
@@ -72,7 +72,7 @@ export default function About() {
               />
               
               {/* Dark Overlay gradient for text legibility */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#09090b]/90 via-transparent to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#faf9f5]/90 via-transparent to-transparent opacity-80" />
               
               {/* Scanning terminal line */}
               <div className="absolute top-0 left-0 w-full h-[2px] bg-accent-blue opacity-0 group-hover:opacity-40 animate-scanline pointer-events-none" />
@@ -187,7 +187,7 @@ export default function About() {
                     {timelineEvents.map((event, idx) => (
                       <div key={idx} className="relative">
                         {/* Dot indicator */}
-                        <div className="absolute -left-[35px] top-1.5 w-4.5 h-4.5 rounded-full bg-[#09090b] border border-white/10 flex items-center justify-center">
+                        <div className="absolute -left-[35px] top-1.5 w-4.5 h-4.5 rounded-full bg-[#faf9f5] border border-white/10 flex items-center justify-center">
                           {event.icon}
                         </div>
                         <div className="space-y-1">

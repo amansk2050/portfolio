@@ -103,7 +103,7 @@ export default function TerminalIntro({ onComplete }: TerminalIntroProps) {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, y: -40 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
-          className="fixed inset-0 z-50 bg-[#09090b] flex items-center justify-center p-4 font-mono select-none"
+          className="fixed inset-0 z-50 bg-[#faf9f5] flex items-center justify-center p-4 font-mono select-none"
         >
           {/* Animated Background Grids */}
           <div className="absolute inset-0 tech-grid opacity-10" />
@@ -116,7 +116,7 @@ export default function TerminalIntro({ onComplete }: TerminalIntroProps) {
             className="w-full max-w-2xl h-[450px] rounded-xl border border-white/10 bg-black/80 backdrop-blur-md overflow-hidden flex flex-col shadow-2xl shadow-accent-purple-glow relative terminal-scanline"
           >
             {/* Top Bar */}
-            <div className="h-10 border-b border-white/10 flex items-center justify-between px-4 bg-[#0d0d11] shrink-0">
+            <div className="h-10 border-b border-white/10 flex items-center justify-between px-4 bg-[#f3f1ea] shrink-0">
               <div className="flex items-center gap-2">
                 <Terminal className="w-4 h-4 text-accent-purple" />
                 <span className="text-xs text-zinc-400 font-semibold tracking-wider">SHEIKH-AMAN-TERMINAL // PORTFOLIO</span>
@@ -165,7 +165,7 @@ export default function TerminalIntro({ onComplete }: TerminalIntroProps) {
             </div>
 
             {/* Footer with Skip Info */}
-            <div className="h-10 border-t border-white/5 bg-[#09090c] px-4 flex items-center justify-between text-[10px] text-zinc-500 shrink-0">
+            <div className="h-10 border-t border-white/5 bg-[#f3f1ea] px-4 flex items-center justify-between text-[10px] text-zinc-500 shrink-0">
               <div className="flex items-center gap-1.5">
                 <Shield className="w-3.5 h-3.5 text-accent-purple" />
                 <span>Security audit passed. SSE-256 enabled.</span>

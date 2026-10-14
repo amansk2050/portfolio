@@ -141,8 +141,8 @@ export default function CommandPalette({ onThemeChange, currentTheme }: CommandP
     },
     {
       id: "theme-obsidian",
-      name: "Theme: Obsidian Dark",
-      description: "Switch to a minimal, pure black layout (Default)",
+      name: "Theme: Claude Light",
+      description: "Warm ivory, clay accents, Poppins and Lora (Default)",
       icon: <Palette className="w-4 h-4 text-accent-purple" />,
       category: "Appearance",
       action: () => {
@@ -259,7 +259,7 @@ export default function CommandPalette({ onThemeChange, currentTheme }: CommandP
               exit={{ opacity: 0, scale: 0.97, y: -8 }}
               transition={{ duration: 0.15 }}
               ref={containerRef}
-              className="relative w-full max-w-lg overflow-hidden rounded-xl border border-white/10 bg-[#0c0c0e]/95 shadow-2xl shadow-black/80 flex flex-col font-sans"
+              className="relative w-full max-w-lg overflow-hidden rounded-xl border border-white/10 bg-[#faf9f5]/95 shadow-2xl shadow-black/80 flex flex-col font-sans"
             >
               {/* Input */}
               <div className="flex items-center gap-3 px-4 border-b border-white/5 h-12">
@@ -283,7 +283,7 @@ export default function CommandPalette({ onThemeChange, currentTheme }: CommandP
 
               {/* Ping diagnostic display */}
               {pingResult && (
-                <div className="px-4 py-3 bg-[#050507] border-b border-white/5 font-mono text-[11px] text-accent-cyan leading-5 whitespace-pre-wrap select-text relative">
+                <div className="px-4 py-3 bg-[#efede5] border-b border-white/5 font-mono text-[11px] text-accent-cyan leading-5 whitespace-pre-wrap select-text relative">
                   {pingResult}
                   {isPinging && (
                     <span className="inline-block w-1.5 h-3.5 bg-accent-cyan ml-1 animate-pulse" />
@@ -350,7 +350,7 @@ export default function CommandPalette({ onThemeChange, currentTheme }: CommandP
               </div>
 
               {/* Footer */}
-              <div className="flex items-center justify-between px-4 py-2 bg-[#08080a] border-t border-white/5 text-[10px] text-zinc-500">
+              <div className="flex items-center justify-between px-4 py-2 bg-[#f3f1ea] border-t border-white/5 text-[10px] text-zinc-500">
                 <div className="flex items-center gap-3">
                   <span>↑↓ to navigate</span>
                   <span>↵ to select</span>

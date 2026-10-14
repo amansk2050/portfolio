@@ -56,12 +56,12 @@ export default function Home() {
       case "obsidian":
       default:
         return {
-          "--color-accent-blue": "#3b82f6", // Default Blue
-          "--color-accent-purple": "#a855f7", // Default Purple
-          "--color-accent-cyan": "#06b6d4", // Default Cyan
-          "--color-accent-blue-glow": "rgba(59, 130, 246, 0.15)",
-          "--color-accent-purple-glow": "rgba(168, 85, 247, 0.15)",
-          "--color-accent-cyan-glow": "rgba(6, 182, 212, 0.12)",
+          "--color-accent-blue": "#b4552f", // Clay (default)
+          "--color-accent-purple": "#9a4a2b", // Deep clay
+          "--color-accent-cyan": "#3f6d99", // Blue
+          "--color-accent-blue-glow": "rgba(217, 119, 87, 0.12)",
+          "--color-accent-purple-glow": "rgba(217, 119, 87, 0.1)",
+          "--color-accent-cyan-glow": "rgba(106, 155, 204, 0.12)",
         } as React.CSSProperties;
     }
   };
@@ -73,7 +73,7 @@ export default function Home() {
   return (
     <div
       style={getThemeVariables()}
-      className="min-h-screen bg-[#09090b] text-[#f4f4f5] transition-colors duration-500 selection:bg-accent-purple/30 selection:text-white"
+      className="min-h-screen bg-[#faf9f5] text-[#141413] transition-colors duration-500 selection:bg-accent-purple/30 selection:text-white"
     >
       <Navbar onThemeChange={handleThemeChange} currentTheme={theme} />
       

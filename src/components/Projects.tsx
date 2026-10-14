@@ -49,24 +49,24 @@ export default function Projects() {
       githubUrl: "https://github.com/amansk2050",
       diagram: (
         <svg viewBox="0 0 400 240" fill="none" className="w-full h-auto">
-          <rect width="400" height="240" rx="12" fill="#0d0d12" />
+          <rect width="400" height="240" rx="12" fill="#f3f1ea" />
           {/* chat -> WATI -> agent -> Claude, with the agent reading/writing chat state in Redis */}
-          <path d="M 50,120 L 140,120 L 240,70 L 340,120" stroke="#10b981" strokeWidth="2" strokeDasharray="7 5" className="animate-flow" />
-          <path d="M 240,86 L 240,154" stroke="#06b6d4" strokeWidth="2" strokeDasharray="7 5" className="animate-flow" />
+          <path d="M 50,120 L 140,120 L 240,70 L 340,120" stroke="#5b6e43" strokeWidth="2" strokeDasharray="7 5" className="animate-flow" />
+          <path d="M 240,86 L 240,154" stroke="#3f6d99" strokeWidth="2" strokeDasharray="7 5" className="animate-flow" />
 
-          <circle cx="50" cy="120" r="16" className="fill-[#09090b] stroke-accent-emerald" strokeWidth="2" />
+          <circle cx="50" cy="120" r="16" className="fill-[#faf9f5] stroke-accent-emerald" strokeWidth="2" />
           <text x="50" y="123" textAnchor="middle" className="fill-white font-mono text-[9px]">Chat</text>
 
-          <circle cx="140" cy="120" r="16" className="fill-[#09090b] stroke-accent-blue" strokeWidth="2" />
+          <circle cx="140" cy="120" r="16" className="fill-[#faf9f5] stroke-accent-blue" strokeWidth="2" />
           <text x="140" y="123" textAnchor="middle" className="fill-white font-mono text-[9px]">WATI</text>
 
-          <circle cx="240" cy="70" r="16" className="fill-[#09090b] stroke-accent-purple" strokeWidth="2" />
+          <circle cx="240" cy="70" r="16" className="fill-[#faf9f5] stroke-accent-purple" strokeWidth="2" />
           <text x="240" y="73" textAnchor="middle" className="fill-white font-mono text-[9px]">Agent</text>
 
-          <circle cx="240" cy="170" r="16" className="fill-[#09090b] stroke-accent-cyan" strokeWidth="2" />
+          <circle cx="240" cy="170" r="16" className="fill-[#faf9f5] stroke-accent-cyan" strokeWidth="2" />
           <text x="240" y="173" textAnchor="middle" className="fill-white font-mono text-[9px]">Redis</text>
 
-          <circle cx="340" cy="120" r="16" className="fill-[#09090b] stroke-pink-500" strokeWidth="2" />
+          <circle cx="340" cy="120" r="16" className="fill-[#faf9f5] stroke-pink-500" strokeWidth="2" />
           <text x="340" y="123" textAnchor="middle" className="fill-white font-mono text-[9px]">Claude</text>
 
           <text x="20" y="25" className="fill-zinc-500 font-mono text-[9px]">WHATSAPP_AGENT_FLOW</text>
@@ -89,30 +89,30 @@ export default function Projects() {
       diagram: (
         <svg viewBox="0 0 400 240" fill="none" className="w-full h-auto">
           {/* Grids and flows */}
-          <rect width="400" height="240" rx="12" fill="#0d0d12" />
-          <path d="M 60,120 L 140,80 M 60,120 L 140,160 M 140,80 L 250,80 M 140,160 L 250,160 M 250,80 L 330,120 M 250,160 L 330,120" stroke="rgba(255,255,255,0.08)" strokeWidth="2" />
+          <rect width="400" height="240" rx="12" fill="#f3f1ea" />
+          <path d="M 60,120 L 140,80 M 60,120 L 140,160 M 140,80 L 250,80 M 140,160 L 250,160 M 250,80 L 330,120 M 250,160 L 330,120" stroke="rgba(20, 20, 19, 0.14)" strokeWidth="2" />
           
           {/* Animated path packets */}
-          <path d="M 60,120 L 140,80 L 250,80 L 330,120" stroke="#3b82f6" strokeWidth="2" strokeDasharray="8 6" className="animate-flow" />
-          <path d="M 60,120 L 140,160 L 250,160 L 330,120" stroke="#a855f7" strokeWidth="2" strokeDasharray="8 6" className="animate-flow" />
+          <path d="M 60,120 L 140,80 L 250,80 L 330,120" stroke="#b4552f" strokeWidth="2" strokeDasharray="8 6" className="animate-flow" />
+          <path d="M 60,120 L 140,160 L 250,160 L 330,120" stroke="#9a4a2b" strokeWidth="2" strokeDasharray="8 6" className="animate-flow" />
           
           {/* Nodes */}
-          <circle cx="60" cy="120" r="15" className="fill-[#09090b] stroke-accent-blue" strokeWidth="2" />
+          <circle cx="60" cy="120" r="15" className="fill-[#faf9f5] stroke-accent-blue" strokeWidth="2" />
           <text x="60" y="123" textAnchor="middle" className="fill-white font-mono text-[9px]">Client</text>
 
-          <circle cx="140" cy="80" r="15" className="fill-[#09090b] stroke-accent-purple" strokeWidth="2" />
+          <circle cx="140" cy="80" r="15" className="fill-[#faf9f5] stroke-accent-purple" strokeWidth="2" />
           <text x="140" y="83" textAnchor="middle" className="fill-white font-mono text-[9px]">API</text>
 
-          <circle cx="140" cy="160" r="15" className="fill-[#09090b] stroke-accent-cyan" strokeWidth="2" />
+          <circle cx="140" cy="160" r="15" className="fill-[#faf9f5] stroke-accent-cyan" strokeWidth="2" />
           <text x="140" y="163" textAnchor="middle" className="fill-white font-mono text-[9px]">Bundler</text>
 
-          <circle cx="250" cy="80" r="15" className="fill-[#09090b] stroke-accent-emerald" strokeWidth="2" />
+          <circle cx="250" cy="80" r="15" className="fill-[#faf9f5] stroke-accent-emerald" strokeWidth="2" />
           <text x="250" y="83" textAnchor="middle" className="fill-white font-mono text-[9px]">Queue</text>
 
-          <circle cx="250" cy="160" r="15" className="fill-[#09090b] stroke-pink-500" strokeWidth="2" />
+          <circle cx="250" cy="160" r="15" className="fill-[#faf9f5] stroke-pink-500" strokeWidth="2" />
           <text x="250" y="163" textAnchor="middle" className="fill-white font-mono text-[8px]">AVAX VM</text>
 
-          <circle cx="330" cy="120" r="15" className="fill-[#09090b] stroke-yellow-500" strokeWidth="2" />
+          <circle cx="330" cy="120" r="15" className="fill-[#faf9f5] stroke-yellow-500" strokeWidth="2" />
           <text x="330" y="123" textAnchor="middle" className="fill-white font-mono text-[9px]">DB</text>
 
           {/* Titles */}
@@ -135,24 +135,24 @@ export default function Projects() {
       githubUrl: "https://github.com/amansk2050",
       diagram: (
         <svg viewBox="0 0 400 240" fill="none" className="w-full h-auto">
-          <rect width="400" height="240" rx="12" fill="#0d0d12" />
-          <path d="M 60,120 L 150,120 M 150,120 L 250,70 M 150,120 L 250,170 M 250,70 L 340,120 M 250,170 L 340,120" stroke="rgba(255,255,255,0.08)" strokeWidth="2" />
-          <path d="M 60,120 L 150,120 L 250,70 L 340,120" stroke="#06b6d4" strokeWidth="2" strokeDasharray="6 4" className="animate-flow" />
-          <path d="M 150,120 L 250,170 L 340,120" stroke="#10b981" strokeWidth="2" strokeDasharray="6 4" className="animate-flow" />
+          <rect width="400" height="240" rx="12" fill="#f3f1ea" />
+          <path d="M 60,120 L 150,120 M 150,120 L 250,70 M 150,120 L 250,170 M 250,70 L 340,120 M 250,170 L 340,120" stroke="rgba(20, 20, 19, 0.14)" strokeWidth="2" />
+          <path d="M 60,120 L 150,120 L 250,70 L 340,120" stroke="#3f6d99" strokeWidth="2" strokeDasharray="6 4" className="animate-flow" />
+          <path d="M 150,120 L 250,170 L 340,120" stroke="#5b6e43" strokeWidth="2" strokeDasharray="6 4" className="animate-flow" />
 
-          <circle cx="60" cy="120" r="16" className="fill-[#09090b] stroke-accent-blue" strokeWidth="2" />
+          <circle cx="60" cy="120" r="16" className="fill-[#faf9f5] stroke-accent-blue" strokeWidth="2" />
           <text x="60" y="123" textAnchor="middle" className="fill-white font-mono text-[9px]">Mobile</text>
 
-          <circle cx="150" cy="120" r="16" className="fill-[#09090b] stroke-accent-purple" strokeWidth="2" />
+          <circle cx="150" cy="120" r="16" className="fill-[#faf9f5] stroke-accent-purple" strokeWidth="2" />
           <text x="150" y="123" textAnchor="middle" className="fill-white font-mono text-[9px]">API GW</text>
 
-          <circle cx="250" cy="70" r="16" className="fill-[#09090b] stroke-accent-emerald" strokeWidth="2" />
+          <circle cx="250" cy="70" r="16" className="fill-[#faf9f5] stroke-accent-emerald" strokeWidth="2" />
           <text x="250" y="73" textAnchor="middle" className="fill-white font-mono text-[8px]">AWS KMS</text>
 
-          <circle cx="250" cy="170" r="16" className="fill-[#09090b] stroke-pink-500" strokeWidth="2" />
+          <circle cx="250" cy="170" r="16" className="fill-[#faf9f5] stroke-pink-500" strokeWidth="2" />
           <text x="250" y="173" textAnchor="middle" className="fill-white font-mono text-[8px]">Signer</text>
 
-          <circle cx="340" cy="120" r="16" className="fill-[#09090b] stroke-yellow-500" strokeWidth="2" />
+          <circle cx="340" cy="120" r="16" className="fill-[#faf9f5] stroke-yellow-500" strokeWidth="2" />
           <text x="340" y="123" textAnchor="middle" className="fill-white font-mono text-[9px]">Chain</text>
 
           <text x="20" y="25" className="fill-zinc-500 font-mono text-[9px]">CUSTODIAL_WALLET_FLOW</text>
@@ -174,27 +174,27 @@ export default function Projects() {
       githubUrl: "https://github.com/amansk2050",
       diagram: (
         <svg viewBox="0 0 400 240" fill="none" className="w-full h-auto">
-          <rect width="400" height="240" rx="12" fill="#0d0d12" />
-          <path d="M 60,120 L 150,120 M 150,120 L 250,70 M 150,120 L 250,170 M 250,70 L 340,70 M 250,170 L 340,170" stroke="rgba(255,255,255,0.08)" strokeWidth="2" />
-          <path d="M 60,120 L 150,120 L 250,70 L 340,70" stroke="#8b5cf6" strokeWidth="2" strokeDasharray="7 5" className="animate-flow" />
-          <path d="M 150,120 L 250,170 L 340,170" stroke="#3b82f6" strokeWidth="2" strokeDasharray="7 5" className="animate-flow" />
+          <rect width="400" height="240" rx="12" fill="#f3f1ea" />
+          <path d="M 60,120 L 150,120 M 150,120 L 250,70 M 150,120 L 250,170 M 250,70 L 340,70 M 250,170 L 340,170" stroke="rgba(20, 20, 19, 0.14)" strokeWidth="2" />
+          <path d="M 60,120 L 150,120 L 250,70 L 340,70" stroke="#9a4a2b" strokeWidth="2" strokeDasharray="7 5" className="animate-flow" />
+          <path d="M 150,120 L 250,170 L 340,170" stroke="#b4552f" strokeWidth="2" strokeDasharray="7 5" className="animate-flow" />
 
-          <circle cx="60" cy="120" r="16" className="fill-[#09090b] stroke-accent-blue" strokeWidth="2" />
+          <circle cx="60" cy="120" r="16" className="fill-[#faf9f5] stroke-accent-blue" strokeWidth="2" />
           <text x="60" y="123" textAnchor="middle" className="fill-white font-mono text-[9px]">Tenant</text>
 
-          <circle cx="150" cy="120" r="16" className="fill-[#09090b] stroke-accent-purple" strokeWidth="2" />
+          <circle cx="150" cy="120" r="16" className="fill-[#faf9f5] stroke-accent-purple" strokeWidth="2" />
           <text x="150" y="123" textAnchor="middle" className="fill-white font-mono text-[9px]">Nest App</text>
 
-          <circle cx="250" cy="70" r="16" className="fill-[#09090b] stroke-accent-cyan" strokeWidth="2" />
+          <circle cx="250" cy="70" r="16" className="fill-[#faf9f5] stroke-accent-cyan" strokeWidth="2" />
           <text x="250" y="73" textAnchor="middle" className="fill-white font-mono text-[8px]">Lambda</text>
 
-          <circle cx="250" cy="170" r="16" className="fill-[#09090b] stroke-accent-emerald" strokeWidth="2" />
+          <circle cx="250" cy="170" r="16" className="fill-[#faf9f5] stroke-accent-emerald" strokeWidth="2" />
           <text x="250" y="173" textAnchor="middle" className="fill-white font-mono text-[9px]">Postgres</text>
 
-          <circle cx="340" cy="70" r="16" className="fill-[#09090b] stroke-pink-500" strokeWidth="2" />
+          <circle cx="340" cy="70" r="16" className="fill-[#faf9f5] stroke-pink-500" strokeWidth="2" />
           <text x="340" y="73" textAnchor="middle" className="fill-white font-mono text-[9px]">S3 Buck</text>
 
-          <circle cx="340" cy="170" r="16" className="fill-[#09090b] stroke-yellow-500" strokeWidth="2" />
+          <circle cx="340" cy="170" r="16" className="fill-[#faf9f5] stroke-yellow-500" strokeWidth="2" />
           <text x="340" y="173" textAnchor="middle" className="fill-white font-mono text-[9px]">Cache</text>
 
           <text x="20" y="25" className="fill-zinc-500 font-mono text-[9px]">SAAS_TENANT_ARCHITECTURE</text>
@@ -216,24 +216,24 @@ export default function Projects() {
       githubUrl: "https://github.com/amansk2050",
       diagram: (
         <svg viewBox="0 0 400 240" fill="none" className="w-full h-auto">
-          <rect width="400" height="240" rx="12" fill="#0d0d12" />
-          <path d="M 60,120 L 150,120 M 150,120 L 250,70 M 150,120 L 250,170 M 250,70 L 340,120 M 250,170 L 340,120" stroke="rgba(255,255,255,0.08)" strokeWidth="2" />
-          <path d="M 60,120 L 150,120 L 250,70 L 340,120" stroke="#f59e0b" strokeWidth="2" strokeDasharray="6 4" className="animate-flow" />
-          <path d="M 150,120 L 250,170 L 340,120" stroke="#ef4444" strokeWidth="2" strokeDasharray="6 4" className="animate-flow" />
+          <rect width="400" height="240" rx="12" fill="#f3f1ea" />
+          <path d="M 60,120 L 150,120 M 150,120 L 250,70 M 150,120 L 250,170 M 250,70 L 340,120 M 250,170 L 340,120" stroke="rgba(20, 20, 19, 0.14)" strokeWidth="2" />
+          <path d="M 60,120 L 150,120 L 250,70 L 340,120" stroke="#d97757" strokeWidth="2" strokeDasharray="6 4" className="animate-flow" />
+          <path d="M 150,120 L 250,170 L 340,120" stroke="#6a9bcc" strokeWidth="2" strokeDasharray="6 4" className="animate-flow" />
 
-          <circle cx="60" cy="120" r="16" className="fill-[#09090b] stroke-accent-blue" strokeWidth="2" />
+          <circle cx="60" cy="120" r="16" className="fill-[#faf9f5] stroke-accent-blue" strokeWidth="2" />
           <text x="60" y="123" textAnchor="middle" className="fill-white font-mono text-[9px]">Broker</text>
 
-          <circle cx="150" cy="120" r="16" className="fill-[#09090b] stroke-accent-purple" strokeWidth="2" />
+          <circle cx="150" cy="120" r="16" className="fill-[#faf9f5] stroke-accent-purple" strokeWidth="2" />
           <text x="150" y="123" textAnchor="middle" className="fill-white font-mono text-[9px]">Nginx</text>
 
-          <circle cx="250" cy="70" r="16" className="fill-[#09090b] stroke-yellow-500" strokeWidth="2" />
+          <circle cx="250" cy="70" r="16" className="fill-[#faf9f5] stroke-yellow-500" strokeWidth="2" />
           <text x="250" y="73" textAnchor="middle" className="fill-white font-mono text-[8px]">Vendor</text>
 
-          <circle cx="250" cy="170" r="16" className="fill-[#09090b] stroke-red-500" strokeWidth="2" />
+          <circle cx="250" cy="170" r="16" className="fill-[#faf9f5] stroke-red-500" strokeWidth="2" />
           <text x="250" y="173" textAnchor="middle" className="fill-white font-mono text-[8px]">TaskQ</text>
 
-          <circle cx="340" cy="120" r="16" className="fill-[#09090b] stroke-accent-emerald" strokeWidth="2" />
+          <circle cx="340" cy="120" r="16" className="fill-[#faf9f5] stroke-accent-emerald" strokeWidth="2" />
           <text x="340" y="123" textAnchor="middle" className="fill-white font-mono text-[9px]">Mongo</text>
 
           <text x="20" y="25" className="fill-zinc-500 font-mono text-[9px]">TRAVELTECH_SCHEDULER_FLOW</text>
@@ -243,7 +243,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-24 bg-[#09090b] relative border-t border-white/5">
+    <section id="projects" className="py-24 bg-[#faf9f5] relative border-t border-white/5">
       <div className="absolute top-0 left-1/3 w-[500px] h-[500px] radial-glow-purple pointer-events-none opacity-15" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -347,7 +347,7 @@ export default function Projects() {
               initial={{ opacity: 0, scale: 0.95, y: 15 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 15 }}
-              className="relative w-full max-w-2xl bg-[#0c0c0f] border border-white/10 rounded-2xl shadow-2xl p-6 sm:p-8 flex flex-col gap-6 max-h-[90vh] overflow-y-auto z-10"
+              className="relative w-full max-w-2xl bg-[#faf9f5] border border-white/10 rounded-2xl shadow-2xl p-6 sm:p-8 flex flex-col gap-6 max-h-[90vh] overflow-y-auto z-10"
             >
               {/* Header */}
               <div className="flex items-start justify-between border-b border-white/5 pb-4">

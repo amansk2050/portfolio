@@ -116,7 +116,7 @@ export default function Hero() {
         connIdx: Math.floor(Math.random() * connections.length),
         progress: Math.random(),
         speed: 0.003 + Math.random() * 0.004,
-        color: i % 2 === 0 ? "#3b82f6" : "#a855f7",
+        color: i % 2 === 0 ? "#b4552f" : "#9a4a2b",
       });
     }
 
@@ -161,7 +161,7 @@ export default function Hero() {
         ctx.beginPath();
         ctx.moveTo(fx, fy);
         ctx.lineTo(tx, ty);
-        ctx.strokeStyle = "rgba(255, 255, 255, 0.05)";
+        ctx.strokeStyle = "rgba(20, 20, 19, 0.14)";
         ctx.lineWidth = 1.5;
         ctx.stroke();
       });
@@ -205,10 +205,10 @@ export default function Hero() {
         const currentPulseRadius = node.radius + Math.sin(node.pulse) * 2;
 
         // Node style colors
-        let accentColor = "#3b82f6"; // Gateway (Blue)
-        if (node.type === "queue") accentColor = "#06b6d4"; // Queue (Cyan)
-        if (node.type === "database") accentColor = "#a855f7"; // DB (Purple)
-        if (node.type === "cache") accentColor = "#10b981"; // Cache (Green)
+        let accentColor = "#b4552f"; // Gateway (Blue)
+        if (node.type === "queue") accentColor = "#3f6d99"; // Queue (Cyan)
+        if (node.type === "database") accentColor = "#9a4a2b"; // DB (Purple)
+        if (node.type === "cache") accentColor = "#5b6e43"; // Cache (Green)
 
         const isCurrentHovered = hoveredNode && hoveredNode.label === node.label;
 
@@ -231,7 +231,7 @@ export default function Hero() {
 
         // Draw Label
         ctx.font = "10px monospace";
-        ctx.fillStyle = isCurrentHovered ? "#ffffff" : "rgba(255, 255, 255, 0.4)";
+        ctx.fillStyle = isCurrentHovered ? "#141413" : "rgba(20, 20, 19, 0.55)";
         ctx.textAlign = "center";
         ctx.fillText(node.label, nx, ny - 15);
       });
@@ -254,7 +254,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center bg-[#09090b] overflow-hidden pt-20">
+    <section id="hero" className="relative min-h-screen flex items-center bg-[#faf9f5] overflow-hidden pt-20">
       {/* Background Tech Grids */}
       <div className="absolute inset-0 tech-grid opacity-[0.08]" />
       
@@ -300,7 +300,7 @@ export default function Hero() {
           <div className="flex flex-wrap items-center gap-4 pt-4">
             <button
               onClick={() => handleScrollTo("projects")}
-              className="px-5 py-3 rounded-lg bg-gradient-to-r from-accent-blue to-accent-purple text-xs font-semibold text-white flex items-center gap-2 shadow-lg shadow-accent-blue/15 hover:shadow-accent-blue/25 hover:translate-y-[-1px] active:translate-y-[0px] transition-all cursor-pointer"
+              className="px-5 py-3 rounded-lg bg-gradient-to-r from-accent-blue to-accent-purple text-xs font-semibold text-[#faf9f5] flex items-center gap-2 shadow-lg shadow-accent-blue/15 hover:shadow-accent-blue/25 hover:translate-y-[-1px] active:translate-y-[0px] transition-all cursor-pointer"
             >
               <span>View Projects</span>
               <ArrowRight className="w-4 h-4" />
